@@ -64,6 +64,7 @@ LX = []
 LY = []
 
 chemin = "ex_001.csv"
+# Si le fichier etait dans le sous repertoire "data", on aurait mis "data/ex_001.csv"
 
 with open(chemin, 'r') as f:
     for ligne in f:
