@@ -61,5 +61,4 @@ p = [2, 1] puis p = [1, 2]
 On insère 3 à chaque position possible dans p -> il y a 3 positions possibles
 new_result = [[3, 2, 1], [2, 3, 1], [2, 1, 3], [1, 2, 3], [1, 3, 2], [3, 1, 2]]
 result = [[3, 2, 1], [2, 3, 1], [2, 1, 3], [1, 2, 3], [1, 3, 2], [3, 1, 2]]
-
 """
