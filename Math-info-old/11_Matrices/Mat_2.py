@@ -15,3 +15,18 @@ def voisins(Matrice, sommet):
 
 print("Voisins du sommet 3 :", voisins(M, 3))
 
+# Fonction qui renvoie nombre de voisins
+def arete(Matrice, sommet):
+    return len(voisins(Matrice, sommet))
+
+print("Nombre d'arêtes du sommet 3 :", arete(M, 3))
+
+# Fonction qui renvoie la longeur d'un trajet
+def longueur(Matrice, depart, arivee):
+    if depart == arivee:
+        return 0
+    elif Matrice[depart][arivee] != -1:
+        return Matrice[depart][arivee]
+    else:
+        return -1  # Pas de trajet direct
+    
