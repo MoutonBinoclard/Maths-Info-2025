@@ -1,17 +1,3 @@
-def permutations(liste): # Fonction récursive pour générer les permutations d'une liste
-
-    if len(liste) == 0: # Simple verification, si la liste est vide, aucune permutation
-        return [[]]
-    
-    result = []
-    
-    for i in range(len(liste)):
-        elem = liste[i]
-        reste = liste[:i] + liste[i+1:]
-        for p in permutations(reste):
-            result.append([elem] + p)
-    return result
-
 def permu_non_recursif(liste):
     result = [[]]    
     for elem in liste :
@@ -22,10 +8,26 @@ def permu_non_recursif(liste):
         result = new_result
     return result
 
+def permutations_recursive(liste): # Fonction récursive pour générer les permutations d'une liste
+
+    if len(liste) == 0:
+        return [[]]
+    
+    result = []
+    
+    for i in range(len(liste)):
+        elem = liste[i]
+        reste = liste[:i] + liste[i+1:]
+        for p in permutations_recursive(reste):
+            result.append([elem] + p)
+    return result
+
+
 
 n = 3
-print(permutations(list(range(1, n+1))))
 print(permu_non_recursif(list(range(1, n+1))))
+print(permutations_recursive(list(range(1, n+1))))
+
 
 
 """
