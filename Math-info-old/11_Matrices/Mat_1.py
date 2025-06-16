@@ -34,10 +34,12 @@ matrice_2x3 = np.zeros((2, 3))
 matrice_3x2 = np.zeros((3, 2))
 matrice_identite_4 = np.eye(4)
 
+
 # 1.c.IV / taille d'une matrice, nombre de lignes et de colonnes
 taille_matrice = A.shape
 print("Taille de la matrice A")
 print(taille_matrice)
+
 
 # 1.c.V / calculer A x E, 3A, A + E
 E = np.ones((3, 3))
@@ -51,12 +53,14 @@ print(A_3A)
 print("A + E")
 print(A_plus_E)
 
+
 # 1.c.VI / verif matrice carrée, si oui dimension, si non 0
 def test(M):
     if len(M[0]) == len(M): 
         return len(M)
     else:
         return 0
+
 
 # 1.c.VII / calcul de la trace d'une matrice si elle est carrée
 def trace(M):
