@@ -7,4 +7,5 @@ Pour les plus à l'aise sur github, ouvrez une fork et faite une pull request pl
 
 ## Personnes qui ont participé à l'amélioration de la repo
 
-- Alec BEOLET / @Alec129
+- Alec BEOLET / [@Alec129](https://github.com/Alec129)
+    - Exercice 8 (Code plus simple)
