@@ -41,7 +41,7 @@ val_min_x = -2
 val_max_x = 0.5
 val_min_y = -1.1
 val_max_y = 1.1
-nombre_points = 2001
+nombre_points = 500
 
 # Creation des listes de valeur pour x et y (reel et imaginaire)
 x_vals = np.linspace(val_min_x, val_max_x, nombre_points)
