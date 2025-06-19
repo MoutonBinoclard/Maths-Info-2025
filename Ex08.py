@@ -23,7 +23,7 @@ def f(c):
 
 # Part 2
 
-nombre_pt= 401
+nombre_pt=200
 min = -2
 max = 2
 
@@ -41,7 +41,7 @@ val_min_x = -2
 val_max_x = 0.5
 val_min_y = -1.1
 val_max_y = 1.1
-nombre_points = 101
+nombre_points = 2001
 
 # Creation des listes de valeur pour x et y (reel et imaginaire)
 x_vals = np.linspace(val_min_x, val_max_x, nombre_points)

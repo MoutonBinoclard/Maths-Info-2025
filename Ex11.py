@@ -129,7 +129,6 @@ plt.show()
 
 
 # Les distances augmentent lorsqu'on diminue la précision
-# Logique
 # On peut aussi faire ça avec les frontières des pays :
 # Si on detourait chaque grain de sable, la distance serait enorme
 # Alors qui si on utilser des polygones grand et simple, la distance serait plus courte
