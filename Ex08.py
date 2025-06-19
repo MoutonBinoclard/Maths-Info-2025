@@ -73,3 +73,43 @@ plt.title('Fractale de Mandelbrot')
 plt.colorbar(label='Valeur de f(c)')
 plt.show()
 
+
+# --------------------
+
+# Voici le code fait par Alec, il est très propre
+
+
+M = 20
+m = 10
+
+def f(c):
+    M = 20
+    m = 10
+    u = [0]
+    k = 0
+    while k <= m:
+        if np.sqrt((u[-1].real**2) + (u[-1].real**2)) > M :
+            return k
+        uk1 = u[-1]**2 + c
+        u.append(uk1)
+        k += 1
+    return m+1
+
+c = np.linspace(-2,2,100)
+F = [f(x) for x in c]
+
+plt.plot(c,F,'x')
+plt.show()
+
+x = np.linspace(-2,0.5,101)
+y = np.linspace(-1.1,1.1,101)
+
+F = np.zeros((101,101))
+print(F)
+for i in range(len(x)):
+    for j in range(len(y)):
+        F[i,j] = f(x[i] + y[j]*1j)
+
+plt.imshow(F)
+plt.colorbar()
+plt.show()
