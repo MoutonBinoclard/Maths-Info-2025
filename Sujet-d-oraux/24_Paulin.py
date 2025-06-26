@@ -10,8 +10,8 @@ def melange_americain(liste):
     L1, L2 = separation_deux_paquet(liste)
     liste_melangee = []
     for i in range(len(L1)):
-        liste_melangee.append(L1[i])
         liste_melangee.append(L2[i])
+        liste_melangee.append(L1[i])
     if len(L1) < len(L2):
         liste_melangee.append(L2[-1])
     return liste_melangee
