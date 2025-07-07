@@ -27,19 +27,31 @@ matrice_2 = [
 ]
 
 def afficher_matrice(matrice):
+    """
+    Fonction qui affiche une matrice dans le terminal
+    """
     for ligne in matrice:
         print(ligne)
 
-
-def creer_points_accessibles(matrice):
-    # création matrice vide
-    matrice_pt_accessibles = []
+def creation_matrice_vide(matrice):
+    """
+    Crée une matrice rempli de zero de la même taille que la matrice donnée
+    """
+    matrice_vide = []
     for i in range(len(matrice)):
         ligne = []
         for j in range(len(matrice[i])):
             ligne.append(0)
-        matrice_pt_accessibles.append(ligne)
+        matrice_vide.append(ligne)
+    return matrice_vide
 
+
+def creer_points_accessibles(matrice):
+    """
+    Crée une matrice avec les point accessible sur la première ligne
+    """
+    # Création d'une matrice vide, de la même taille que la matrice
+    matrice_pt_accessibles = creation_matrice_vide(matrice)
     # Copie de la ligne 0 dans la matrice
     matrice_pt_accessibles[0] = matrice[0]
     return matrice_pt_accessibles
@@ -48,7 +60,7 @@ def creer_points_accessibles(matrice):
 def augmenter_matrice(matrice, matrice_acces):
     import copy
     matrice_acces_clone = copy.deepcopy(matrice_acces)
-    #afficher_matrice(matrice_acces_clone)
+    # Le deepcopy c'est pour eviter des bugs
 
     for ligne in range(len(matrice_acces)):
         for colonne in range(len(matrice_acces[ligne])):
@@ -78,4 +90,3 @@ def verif_parcours_possible(matrice):
 
 print(verif_parcours_possible(matrice_1))
 print(verif_parcours_possible(matrice_2))
-
